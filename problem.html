@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сообщить об ошибке | Veldy</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Шапка страницы */
+        .error-header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        .error-header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        
+        /* Форма */
+        .error-form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Сообщение после отправки */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #2ecc71;
+            color: white;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .error-header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта (как на других страницах) -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="error-report.html" class="active">Сообщить об ошибке</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <section class="error-header">
+            <div class="container">
+                <h1>Сообщить об ошибке</h1>
+                <p>Помогите нам сделать сайт лучше</p>
+            </div>
+        </section>
+        
+        <div class="container">
+            <form id="errorReportForm" class="error-form">
+                <div class="form-group">
+                    <label for="pageUrl">Адрес страницы с ошибкой*</label>
+                    <input type="url" id="pageUrl" required placeholder="https://...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="errorType">Тип проблемы*</label>
+                    <select id="errorType" required>
+                        <option value="">Выберите тип проблемы</option>
+<option value="broken_link">Не работает ссылка</option>
+                        <option value="display_error">Ошибка отображения</option>
+                        <option value="functionality">Не работает функционал</option>
+                        <option value="content">Ошибка в содержании</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="errorDescription">Подробное описание*</label>
+                    <textarea id="errorDescription" required placeholder="Опишите, что произошло, какие действия привели к ошибке..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="screenshot">Скриншот (если есть)</label>
+                    <input type="file" id="screenshot" accept="image/*">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Ваш email (для обратной связи)</label>
+                    <input type="email" id="email" placeholder="email@example.com">
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить сообщение</button>
+                
+                <div id="successMessage" class="success-message">
+                    Спасибо! Ваше сообщение отправлено. Мы постараемся исправить ошибку как можно скорее.
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Подвал сайта (как на других страницах) -->
+    <footer>
+        <p>© 2025 Veldy. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Обработка формы
+        document.getElementById('errorReportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Здесь должна быть логика отправки данных на сервер
+            // В демо-версии просто показываем сообщение об успехе
+            
+            // Скрываем форму
+            this.style.display = 'none';
+            
+            // Показываем сообщение об успехе
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // В реальном проекте здесь будет AJAX-запрос к серверу
+            /*
+            const formData = new FormData(this);
+            
+            fetch('/api/report-error', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('successMessage').style.display = 'block';
+                    this.reset();
+                }
+            });
+            */
+        });
+    </script>
+</body>
+</html>

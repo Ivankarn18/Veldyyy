@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Veldy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- То же меню, что и на главной -->
+    </header>
+
+    <main>
+        <section class="cart">
+            <div class="container">
+                <h1>Корзина</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Главная</a> / <span>Корзина</span>
+                </div>
+                <div class="cart-content">
+  <div class="cart-items">
+    <!-- Товары будут добавляться динамически -->
+  </div>
+
+  <div class="cart-summary">
+    <h3>Итого</h3>
+    <div class="summary-row">
+      <span>Товары (<span id="total-items">0</span>)</span>
+      <span id="subtotal">0 ₽</span>
+    </div>
+    <div class="summary-row">
+      <span>Скидка</span>
+      <span id="discount">-0 ₽</span>
+    </div>
+    <div class="summary-row">
+      <span>Доставка</span>
+      <span id="delivery">300 ₽</span>
+    </div>
+    <div class="summary-row total">
+      <span>К оплате</span>
+      <span id="total">0 ₽</span>
+    </div>
+
+    <button class="checkout-btn">Оформить заказ</button>
+  </div>
+</div>
+<div class="payment-methods">
+                            <img src="images/visa-payment-card1873.png" alt="Visa">
+                            <img src="images/Mastercard-logo.png" alt="Mastercard">
+                            <img src="images/Mir-01.png" alt="Мир">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- То же подвал, что и на главной -->
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

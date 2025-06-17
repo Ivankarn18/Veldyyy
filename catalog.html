@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Veldy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- То же меню, что и на главной -->
+    </header>
+
+    <main>
+        <section class="catalog-header">
+            <div class="container">
+                <h1>Каталог деловой одежды</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Главная</a> / <span>Каталог</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog">
+            <div class="container">
+                <div class="filters">
+                    <div class="filter-section">
+                        <h3>Категории</h3>
+                        <ul>
+                            <li><a href="#">Мужские костюмы</a></li>
+                            <li><a href="#">Женские костюмы</a></li>
+                            <li><a href="#">Рубашки</a></li>
+                            <li><a href="#">Аксессуары</a></li>
+                        </ul>
+                    </div>
+                    <div class="filter-section">
+                        <h3>Цена</h3>
+                        <div class="price-range">
+                            <input type="range" min="1000" max="50000" value="1000" id="price-min">
+                            <input type="range" min="1000" max="50000" value="50000" id="price-max">
+                            <div class="price-values">
+                                <span id="min-value">1 000</span> - <span id="max-value">50 000</span> руб.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <h3>Размер</h3>
+                        <div class="sizes">
+                            <label><input type="checkbox" name="size" value="XS"> XS</label>
+                            <label><input type="checkbox" name="size" value="S"> S</label>
+                            <label><input type="checkbox" name="size" value="M"> M</label>
+                            <label><input type="checkbox" name="size" value="L"> L</label>
+                            <label><input type="checkbox" name="size" value="XL"> XL</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="sorting">
+                        <span>Сортировка:</span>
+                        <select id="sort-by">
+                            <option value="popular">По популярности</option>
+                            <option value="price-asc">По возрастанию цены</option>
+                            <option value="price-desc">По убыванию цены</option>
+                            <option value="newest">Сначала новые</option>
+                        </select>
+                    </div>
+
+                    <div class="products-grid">
+                        <!-- Товары будут подгружаться через JS -->
+                    </div>
+
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">&raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- В файле catalog.html -->
+<section class="catalog">
+  <div class="container">
+    <!-- Фильтры остаются без изменений -->
+
+    <div class="products">
+      <!-- Сортировка остается без изменений -->
+
+      <div class="products-grid">
+        <!-- Мужские костюмы -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/муж (1).jpg" alt="Мужской костюм Премиум">
+            <div class="product-badge">NEW</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Костюм "Премиум" мужской</h3>
+            <div class="product-price">
+              <span class="current-price">32 990 ₽</span>
+              <span class="old-price">38 990 ₽</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="wishlist">♡</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Женские костюмы -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/жен.jpg" alt="Женский костюм Элегант">
+            <div class="product-badge">-15%</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Костюм "Элегант" женский</h3>
+            <div class="product-price">
+              <span class="current-price">27 490 ₽</span>
+              <span class="old-price">32 990 ₽</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="wishlist">♡</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Рубашки -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/руб.jpg" alt="Рубашка мужская Классик">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Рубашка "Классик"</h3>
+            <div class="product-price">
+              <span class="current-price">5 990 ₽</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="wishlist">♡</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Блузки -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/блуз.jpg" alt="Блузка женская Офис">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Блузка "Офис"</h3>
+            <div class="product-price">
+              <span class="current-price">4 490 ₽</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="wishlist">♡</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Галстуки -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/галс.jpg" alt="Галстук Деловой">
+            <div class="product-badge">ХИТ</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Галстук "Деловой"</h3>
+            <div class="product-price">
+              <span class="current-price">2 990 ₽</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="wishlist">♡</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Портфели -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/порт.jpg" alt="Портфель кожаный">
+          </div>
+          <div class="product-info">
+<h3 class="product-title">Портфель кожаный</h3>
+            <div class="product-price">
+              <span class="current-price">12 990 ₽</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="wishlist">♡</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Добавьте еще 6-10 товаров по аналогии -->
+      </div>
+
+      <!-- Пагинация -->
+      <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <footer>
+        <!-- То же подвал, что и на главной -->
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

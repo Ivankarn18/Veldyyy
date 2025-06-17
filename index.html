@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veldy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/лого диплоооом3.png" alt="Качество">
+        <div class="container">
+            <div class="logo">Veldy</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="problem.html">Нашли проблему?</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="login-btn">Вход</a>
+                <a href="cart.html" class="cart-btn">Корзина (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Деловая одежда для деловой жизни</h1>
+                <p>Качественные костюмы, рубашки и аксессуары</p>
+                <a href="catalog.html" class="btn">В каталог</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <img src="images/silk_intertkan.jpg" alt="Качество">
+                    <h3>Премиальное качество</h3>
+                    <p>Используем только лучшие материалы</p>
+                </div>
+                <div class="feature">
+                    <img src="images/870071.png" alt="Доставка">
+                    <h3>Быстрая доставка</h3>
+                    <p>По всей России за 1-3 дня</p>
+                </div>
+                <div class="feature">
+                    <img src="images/vozvrat-tovara-po-pochte-500x500.png" alt="Возврат">
+                    <h3>Легкий возврат</h3>
+                    <p>14 дней на возврат товара</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-products">
+            <div class="container">
+                <h2>Популярные товары</h2>
+                <div class="products-grid">
+                    <img src="images/блузпоп.jpg" alt="Блузка женская Офис">
+                    <img src="images/рубпоп.jpg" alt="Рубашка мужская Классик">
+                    <!-- Товары будут подгружаться через JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <p>Veldy- лидер в производстве и продаже деловой одежды с 2004 года.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>Москва, ул. Мякино, 12</p>
+                <p>+7 (495) 133-46-13</p>
+                <p>info@Veldy.ru</p>
+            </div>
+            <div class="footer-section">
+                <h3>Подписка</h3>
+                <form id="subscribe-form">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<div class="products-grid">
+  <!-- Товары будут загружаться через JS -->
+</div>
+</html>

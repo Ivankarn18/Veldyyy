@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Veldy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Veldy</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="logout-btn">Выйти</a>
+                <a href="cart.html" class="cart-btn">Корзина (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="account">
+            <div class="container">
+                <h1>Личный кабинет</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Главная</a> / <span>Личный кабинет</span>
+                </div>
+
+                <div class="account-content">
+                    <div class="account-sidebar">
+                        <div class="user-info">
+                            <div class="avatar">
+                                <img src="images/avatar-placeholder.png" alt="Аватар">
+                            </div>
+                            <h3 id="user-name">Иван Иванов</h3>
+                            <p id="user-email">ivan@example.com</p>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li class="active"><a href="#" data-tab="profile">Профиль</a></li>
+                                <li><a href="#" data-tab="orders">Мои заказы</a></li>
+                                <li><a href="#" data-tab="addresses">Адреса доставки</a></li>
+                                <li><a href="#" data-tab="wishlist">Избранное</a></li>
+                                <li><a href="#" data-tab="settings">Настройки</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="account-main">
+                        <div class="tab-content active" id="profile">
+                            <h2>Личные данные</h2>
+                            <form id="profile-form">
+                                <div class="form-group">
+                                    <label>Имя</label>
+                                    <input type="text" id="profile-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" id="profile-email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Телефон</label>
+                                    <input type="tel" id="profile-phone" required>
+                                </div>
+                                <button type="submit" class="btn">Сохранить изменения</button>
+                            </form>
+                        </div>
+
+                        <div class="tab-content" id="orders">
+                            <h2>История заказов</h2>
+                            <div class="orders-list">
+                                <div class="order">
+                                    <div class="order-header">
+                                        <div class="order-number">Заказ #12345</div>
+                                        <div class="order-date">15.05.2023</div>
+<div class="order-status completed">Выполнен</div>
+                                        <div class="order-total">35 270 ₽</div>
+                                    </div>
+                                    <div class="order-products">
+                                        <div class="product">
+                                            <img src="images/products/suit-1-thumb1.jpg" alt="Костюм">
+                                            <div class="product-info">
+                                                <h4>Мужской костюм "Престиж"</h4>
+                                                <p>1 × 24 990 ₽</p>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <img src="images/products/shirt-1-thumb1.jpg" alt="Рубашка">
+                                            <div class="product-info">
+                                                <h4>Мужская рубашка "Офис"</h4>
+                                                <p>2 × 5 990 ₽</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn">Повторить заказ</button>
+                                        <button class="btn outline">Оставить отзыв</button>
+                                    </div>
+                                </div>
+                                <!-- Другие заказы -->
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="addresses">
+                            <h2>Адреса доставки</h2>
+                            <div class="addresses-list">
+                                <div class="address">
+                                    <h4>Домашний адрес</h4>
+                                    <p>Москва, ул. Мякино, 12</p>
+                                    <p>+7 (495) 133-46-13</p>
+                                    <div class="address-actions">
+                                        <button class="btn">Изменить</button>
+                                        <button class="btn outline">Удалить</button>
+                                    </div>
+                                </div>
+                                <button class="btn">Добавить новый адрес</button>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="wishlist">
+                            <h2>Избранное</h2>
+                            <div class="products-grid">
+                                <!-- Товары из избранного -->
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="settings">
+                            <h2>Настройки аккаунта</h2>
+                            <form id="settings-form">
+                                <div class="form-group">
+                                    <label>Текущий пароль</label>
+                                    <input type="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Новый пароль</label>
+                                    <input type="password">
+                                </div>
+                                <div class="form-group">
+                                    <label>Подтвердите новый пароль</label>
+                                    <input type="password">
+                                </div>
+                                <div class="form-group">
+<label>
+                                        <input type="checkbox"> Подписаться на рассылку
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn">Сохранить изменения</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- То же подвал, что и на главной -->
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Загрузка данных пользователя
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = JSON.parse(localStorage.getItem('user'));
+            if (!user) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            // Заполнение данных профиля
+            document.getElementById('user-name').textContent = user.name;
+            document.getElementById('user-email').textContent = user.email;
+            document.getElementById('profile-name').value = user.name;
+            document.getElementById('profile-email').value = user.email;
+            document.getElementById('profile-phone').value = user.phone || '';
+
+            // Переключение табов
+            document.querySelectorAll('.account-sidebar a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const tabId = link.getAttribute('data-tab');
+                    
+                    document.querySelectorAll('.account-sidebar li').forEach(li => {
+                        li.classList.remove('active');
+                    });
+                    link.parentElement.classList.add('active');
+                    
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            // Сохранение профиля
+            const profileForm = document.getElementById('profile-form');
+            if (profileForm) {
+                profileForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    user.name = document.getElementById('profile-name').value;
+                    user.email = document.getElementById('profile-email').value;
+                    user.phone = document.getElementById('profile-phone').value;
+                    
+                    localStorage.setItem('user', JSON.stringify(user));
+                    document.getElementById('user-name').textContent = user.name;
+                    
+                    showNotification('Изменения сохранены');
+                });
+            }
+        });
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
